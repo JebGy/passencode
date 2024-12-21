@@ -9,7 +9,7 @@ function App() {
   const [encoded, setEncoded] = useState('')
 
   const apiconsume = async () => {
-    await axios.get(`https://xeric-ailee-jebgy-115c7177.koyeb.app/api/encode/${password}`).then((res) => {
+    await axios.get(import.meta.env.APIKEY + password).then((res) => {
       setEncoded(res.data.encoded)
     });
   }
