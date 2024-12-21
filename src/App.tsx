@@ -7,7 +7,7 @@ function App() {
   const [encoded, setEncoded] = useState('')
 
   const apiconsume = async () => {
-    await axios.get(import.meta.env.APIKEY + password).then((res) => {
+    await axios.get(import.meta.env.VITE_SOME_KEY + password).then((res) => {
       setEncoded(res.data.encoded)
     });
   }
